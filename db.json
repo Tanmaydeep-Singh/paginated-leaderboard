@@ -1,7 +1,62 @@
-{  
-    "employee": {  
-        "name":       "sonoo",   
-        "salary":      56000,   
-        "married":    true  
-    }  
-}  
+[
+  {
+    "id": 1,
+    "name": "Tanmay",
+    "email": "simarsing007@gmail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+  },
+  {
+    "id": 2,
+    "name": "A",
+    "email": "A@gmail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  }{
+    "id": 1,
+    "name": "Tanmay",
+    "email": "tanmay@gamail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  },
+  {
+    "id": 2,
+    "name": "Tanmay",
+    "email": "tanmay@gamail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  }{
+    "id": 1,
+    "name": "Tanmay",
+    "email": "tanmay@gamail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  },
+  {
+    "id": 2,
+    "name": "Tanmay",
+    "email": "tanmay@gamail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  }{
+    "id": 1,
+    "name": "Tanmay",
+    "email": "tanmay@gamail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  },
+  {
+    "id": 2,
+    "name": "Tanmay",
+    "email": "tanmay@gamail.com",
+    "status": "admin",
+    "test": "13-05-2023"
+    
+  }
+]

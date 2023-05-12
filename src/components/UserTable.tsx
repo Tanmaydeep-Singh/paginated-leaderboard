@@ -6,15 +6,16 @@ import { GrFormAdd } from "react-icons/gr";
 import AddUser from "./AddUser";
 import { RxCrossCircled } from "react-icons/rx";
 import { useQuery } from "@tanstack/react-query";
+import { getUserData } from "../features/api/api";
 
 function UserTable() {
   
   const userData = useQuery({
     queryKey: ['userdata'],
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    queryFn: () => { () => [...countries] }
+    queryFn: getUserData 
   })
-  console.log("USER DATA", userData);
+  console.log("USER DATA js", userData);
 
   const [modal, setModal] = useState(true);
   const [formData, setFormData] = useState({

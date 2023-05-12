@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export function getUserData() {
-    return axios.get("")
-    .then(res => res.data);
+    return axios.get("https://my-json-server.typicode.com/Tanmaydeep-Singh/paginated-leaderboard/db")
+    .then(res => { console.log("JSON",res.data);});
 }
 
 
