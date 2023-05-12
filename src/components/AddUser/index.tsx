@@ -18,19 +18,13 @@ function Index (visible: any) {
   const handleInputChange = (event: { target: { name: any, value: any } }) => {
     const { name, value } = event.target
     setFormData({ ...formData, [name]: value })
-    console.log('Form Data', formData)
   }
 
   const handleData = (event: any) => {
     event.preventDefault()
     if (formData.name === '' || formData.email === '' || formData.role === '') {
       setModal(!modal)
-      console.log(modal)
-      console.log('Form Data', formData)
-
       createUserMutation.mutate(formData)
-    } else {
-      console.log('Form Data', formData)
     }
   }
 

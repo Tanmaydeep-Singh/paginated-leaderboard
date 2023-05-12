@@ -19,7 +19,6 @@ const UserTable = (): any => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    console.log('USER DATA js', userData?.data?.data?.userdata)
     setData(userData?.data?.data?.userdata ?? [])
   })
 
@@ -33,18 +32,13 @@ const UserTable = (): any => {
   const handleInputChange = (event: any): any => {
     const { name, value } = event.target
     setFormData({ ...formData, [name]: value })
-    console.log('Form Data', formData)
   }
 
   const handleData = (event: any): any => {
     event.preventDefault()
     if (formData.name === '' || formData.email === '' || formData.role === '') {
       setModal(!modal)
-      console.log(modal)
-      console.log('Form Data', formData)
       createUserMutation.mutate(formData)
-    } else {
-      console.log('Form Data', formData)
     }
   }
   return (
