@@ -12,7 +12,6 @@ function UserTable() {
   
   const userData = useQuery({
     queryKey: ['userdata'],
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     queryFn: getUserData 
   })
   console.log("USER DATA js", userData);
