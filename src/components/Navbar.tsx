@@ -1,8 +1,9 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import React from 'react'
 
-function Navbar() {
+function Navbar () {
   return (
-    <div className="  p-20 py-0 m-5">
+    <div className=" p-20 py-0 m-5">
       <h1 className=" text-[32px]  m-2">Company Settings</h1>
       <div className="flex">
 
@@ -13,7 +14,7 @@ function Navbar() {
         <a href=" " className=" border-y-2 border-x-[0.5px]  p-3 m-0  rounded-r-[8px]">Integrations</a>
       </div>
     </div>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

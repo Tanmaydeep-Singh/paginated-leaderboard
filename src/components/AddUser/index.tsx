@@ -1,48 +1,51 @@
-import { useMutation } from "@tanstack/react-query";
-import React, { useEffect, useState } from "react";
-import { RxCrossCircled } from "react-icons/rx";
-import { createUser } from "../../features/api/api";
-function Index(visible: any) {
-  const createUserMutation =useMutation({
-    mutationFn: createUser,
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { useMutation } from '@tanstack/react-query'
+import React, { useState } from 'react'
+import { RxCrossCircled } from 'react-icons/rx'
+import { createUser } from '../../features/api/api'
+function Index (visible: any) {
+  const createUserMutation = useMutation({
+    mutationFn: createUser
   })
-  const [modal, setModal] = useState(true);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    role: "",
-  });
 
-  const handleInputChange = (event: { target: { name: any; value: any } }) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-    console.log("Form Data", formData);
-  };
+  const [modal, setModal] = useState(true)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    role: ''
+  })
+
+  const handleInputChange = (event: { target: { name: any, value: any } }) => {
+    const { name, value } = event.target
+    setFormData({ ...formData, [name]: value })
+    console.log('Form Data', formData)
+  }
 
   const handleData = (event: any) => {
-    event.preventDefault();
-    if (formData.name === "" || formData.email === "" || formData.role === "") {
-      setModal(!modal);
-      console.log(modal);
-      console.log("Form Data", formData);
+    event.preventDefault()
+    if (formData.name === '' || formData.email === '' || formData.role === '') {
+      setModal(!modal)
+      console.log(modal)
+      console.log('Form Data', formData)
 
-      createUserMutation.mutate(formData);
+      createUserMutation.mutate(formData)
     } else {
-      console.log("Form Data", formData);
+      console.log('Form Data', formData)
     }
-  };
-  
+  }
+
   return (
     <div
-      className={ modal ? " hidden" : 
-    "absolute top-0 left-0 grid justify-items-center items-center fixed w-screen h-screen backdrop-blur-sm z-10" }
+      className={ modal
+        ? ' hidden'
+        : 'absolute top-0 left-0 grid justify-items-center items-center fixed w-screen h-screen backdrop-blur-sm z-10' }
     >
       <div className="z-[100] w-[450px] h-[450px] border-2 shadow-md  p-8 rounded-xl bg-white text-black">
         <h1 className="text-[40px]"> Add User </h1>
         <button
           type="button"
           onClick={() => {
-            setModal(!modal);
+            setModal(!modal)
           }}
           className="relative left-[95%] -top-[19%] z-[200]"
         >
@@ -103,7 +106,7 @@ function Index(visible: any) {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default Index;
+export default Index

@@ -1,12 +1,11 @@
-import axios from "axios";
+import axios from 'axios'
 
-export function getUserData() {
-    return axios.get("https://my-json-server.typicode.com/Tanmaydeep-Singh/paginated-leaderboard/db")
-    .then(res => { console.log("JSON",res.data);});
+export const getUserData = async (): Promise<any> => {
+  return await axios.get('https://my-json-server.typicode.com/Tanmaydeep-Singh/paginated-leaderboard/db')
+    .then(res => res)
 }
 
-
-export function createUser(data: any ) {
-    return axios.post("", {data})
-    .then(res => res.data);
+export const createUser = async (data: any): Promise<any> => {
+  await axios.post('https://my-json-server.typicode.com/Tanmaydeep-Singh/paginated-leaderboard/db', { data })
+    .then(res => res.data)
 }
