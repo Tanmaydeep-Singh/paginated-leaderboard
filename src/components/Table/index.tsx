@@ -118,11 +118,11 @@ const Table = (props: any) => {
       <table className=" w-[100%]">
         <div className="flex flex-row border-b-[1px] border-[#5B5B5B]  gap-[4px] p-[25px] ">
           <span className="flex justify-center items-center flex-[0.4]"></span>
-          <span className="flex md:flex-[3.0] items-center">Name <BsArrowDownShort /></span>
-          <span className="flex flex-[0.4] items-center">Status <BsArrowDownShort /></span>
-          <span className="flex flex-[0.4] items-center">Role <BsArrowDownShort /></span>
-          <span className="flex flex-[0.4] items-center">Last Login<BsArrowDownShort /></span>
-          <span className="flex flex-[0.4] items-center"> </span>
+          <span className="flex flex-[4.0] md:flex-[3.0] items-center">Name <BsArrowDownShort /></span>
+          <span className="flex flex-[1.5] md:flex-[0.4] items-center">Status <BsArrowDownShort /></span>
+          <span className="flex flex-[1.5] md:flex-[0.4] items-center">Role <BsArrowDownShort /></span>
+          <span className="flex flex-[1.5] md:flex-[0.4] items-center">Last Login<BsArrowDownShort /></span>
+          <span className="flex flex-[0.4] md:flex-[0.4] items-center"> </span>
         </div>
         <tbody>
           {
@@ -135,7 +135,7 @@ const Table = (props: any) => {
                   <input type="checkbox" />
                 </span>
 
-                <span className="flex flex-[3.0] gap-[5px] justify-start items-center">
+                <span className="flex flex-[4.0] md:flex-[3.0] gap-[5px] justify-start items-center">
                   <img
                     className=" w-[48px] h-[48px] rounded-[50%] "
                     src="https://picsum.photos/200/300"
@@ -150,13 +150,13 @@ const Table = (props: any) => {
                 </span>
 
                 {el?.status
-                  ? <span className="flex flex-[0.4] items-center ">              <span className="bg-[#E5F9DB] text-[16px] text-[#5D9C59] rounded-[30px] px-2 py-[1px] font-semibold">
+                  ? <span className="flex flex-[1.5] md:flex-[0.4] items-center ">              <span className="bg-[#E5F9DB] text-[16px] text-[#5D9C59] rounded-[30px] px-2 py-[1px] font-semibold">
                     Active</span>  </span>
-                  : <span className="flex flex-[0.4] items-center ">              <span className="bg-[#BACDDB] text-[16px]  rounded-[30px] px-2 py-[1px] ">
+                  : <span className="flex flex-[1.5] md:flex-[0.4] items-center ">              <span className="bg-[#BACDDB] text-[16px]  rounded-[30px] px-2 py-[1px] ">
                     Inactive</span>  </span>
                 }
-                <span className="flex flex-[0.4] items-center">{el.role}</span>
-                <span className="flex flex-[0.4] items-center">{el.test}</span>
+                <span className="flex flex-[1.5] md:flex-[0.4] items-center">{el.role}</span>
+                <span className="flex flex-[1.5] md:flex-[0.4] items-center">{el.test}</span>
                 <span className="flex flex-[0.4] items-center justify-evenly">
                   <span>
                     <button type="button"
