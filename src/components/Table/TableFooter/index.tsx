@@ -25,7 +25,7 @@ const TableFooter = (props: any): any => {
       {props.range.map((el: any, index: number) => (
         <button
           key={index}
-          className={ props.page === el ? ' w-7 h-7 bg-blue-500 m-2 rounded-md' : 'inactiveButton'
+          className={ props.page === el ? ' w-7 h-7 bg-blue-500 m-2 rounded-md' : 'w-7 h-7 m-2 rounded-md'
             }
           onClick={() => { props.setPage(el) }}
         >
